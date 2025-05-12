@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+:root{
+  ---light-harsh: #828282;
+  ---dark-harsh: #575757;
+  ---orange: #FB9333;
+  ---orange2: #FFC87A;
+  ---half-orange: #ffca97;
+  ---light-orange: #FFF0DC;
+  ---other-orange: #FFE8C8;
+  ---white: #ffff;
+  ---font1: ;
+  ---font2: ;
+}
+
+body{
+  font-family:"Poppins", sans-serif;
+  overflow: hidden;
+}
+
+.header{
+  box-shadow: 1px 1px 10px 1px var(---light-harsh)
+}
+
+.home-sec{
+  background: linear-gradient(240deg, var(---half-orange), var(---white), var(---light-orange));
+  background-size: 400% 800%;
+  animation: color 5s ease infinite;
+}
+
+@keyframes color{
+  0% {
+    background-position:  0% 50%;
+  }
+
+  50% {
+    background-position:  100% 50%;
+  }
+  100% {
+    background-position:  0% 50%;
+  }
+}
+
+.sign-up{
+  background-color: var(---orange);
+  padding: 7px 25px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  box-shadow: 2px 2px 5px var(---light-harsh);
+}
+
+.sign-up:hover{
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid var(---orange);
+  color: var(---orange);
+}
+
+.arrow-icon{
+  filter: invert(1) brightness(0) saturate(20);
+}
+
+.smaller-box:hover{
+  scale: 2px;
+  box-shadow: 1px 1px 10px 1px var(---other-orange);
+}
+
+/* .Review-sec{
+  /* display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+} */
+
+.parent-product{
+  display: grid;
+  grid-column: 1fr 1fr 1fr;
+  background-color: #FB9333;
+}
+
+.frist-product{
+  background: url(./assets/1st\ plate.png);
+}
+
+.second-product{
+  background: url(./assets//2nd\ plate.png);
+}
+
+.third-plate{
+  background: url(./assets//3rd\ plate.png);
+}
+
+.subscribe-box{
+  background: url(./assets/subscribe-bg.png) var(---light-orange);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.appear{
+  animation: animate 600ms linear;
+}
+
+@keyframes animate{
+  from {
+    opacity: 0;
+    scale: 0.7;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+
+
+/* .fromButtom{
+  animation: side linear;
+  animation-timeline: view(20px 40px);
+  animation-range: entry 0% cover 27%
+}
+
+@keyframes side{
+  from {
+    opacity: 0;
+    transform: translateY(-100px) scale(0.3);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+.fromLeft{
+  animation: lefty linear;
+  animation-timeline: view(20px 40px);
+  animation-range: entry 0% cover 40%
+}
+
+@keyframes lefty{
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
+
+.pop{
+  animation: animator 600ms linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%
+}
+
+@keyframes animator{
+  from {
+    opacity: 0;
+    scale: 0.7;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+} */
