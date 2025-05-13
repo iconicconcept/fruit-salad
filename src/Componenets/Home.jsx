@@ -11,7 +11,7 @@ import harmburger from "../assets/hamburger.png"
 
   useEffect(()=>{
     AOS.init({
-      duration:1300
+      duration:1200
     })
   },[])
 
@@ -34,7 +34,7 @@ import harmburger from "../assets/hamburger.png"
 
   return (
     <section 
-        className="h-[max-content] bg-white text-[#828282] flex flex-col gap-6 home-sec pb-6">
+        className="h-[max-content] bg-white text-[#828282] flex flex-col gap-6 home-sec pb-6 relative">
         <div className="py-5 flex justify-between items-center header w-full px-7 md:px-17 lg:px-17 mb-10">
             <img src={Logo} alt="Logo" />
             <ul className="hidden md:flex lg:flex gap-3 cursor-pointer font-semibold">
@@ -56,7 +56,7 @@ import harmburger from "../assets/hamburger.png"
             : <img src={harmburger} onClick={toggleMenu} className="bg-orange-200 cursor-pointer px-1 py-2 flex md:hidden lg:hidden" alt="toggle" />}
         </div>
 
-        {isOpen && <div className="bg-orange-300 h-[70vh] flex justify-center items-center text-white w-full pt-10 absolute z-5">
+        {isOpen && <div className="bg-orange-300 h-[70vh] flex justify-center items-center text-white w-full mt-18 absolute z-5">
             <ul className="flex flex-col gap-8 font-bold text-[18px] text-center">
                 <li className="cursor-pointer "><a href="/" onClick={closeMenu}>Home</a></li>
                 <li className="cursor-pointer"><a href="./Contact.jsx" onClick={closeMenu}>Contact</a></li>

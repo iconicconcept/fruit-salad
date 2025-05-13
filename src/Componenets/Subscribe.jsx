@@ -1,4 +1,7 @@
 import React, {useState} from "react"
+import { useEffect } from "react"
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 function Subscribe() {
   const [subscribe, setSubscribe] = useState("")
@@ -11,6 +14,12 @@ function Subscribe() {
   const change = (event)=>{
     setSubscribe(event.target.value);
   }
+
+  useEffect(()=>{
+    Aos.init({
+        duration: 1200
+    })
+  }, [])
 
   return (
     <section className="h-max md:h-[100vh] lg:h-[100vh] flex justify-center items-center px-5 md:px-0 lg:px-0">

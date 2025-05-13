@@ -1,8 +1,18 @@
 import plate1 from "../assets/1st plate.png"
 import plate2 from "../assets/2nd plate.png"
 import plate3 from "../assets/3rd plate.png"
+import { useEffect } from "react"
+
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 function Products() {
+  useEffect(()=>{
+      AOS.init({
+        duration:1200
+      })
+    },[])
+
   return (
     <section className="about-sec h-[max-content] bg-white text-[#828282] px-5 md:px-35 lg:px-35 flex justify-center items-center flex-col py-13">
         <p className="mb-3"data-aos="fade-up">MENU YANG MEMBUATMU JATUH CINTA</p>
