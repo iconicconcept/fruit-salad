@@ -12,7 +12,7 @@ function Review() {
     useEffect(()=>{
         Aos.init({
             duration: 1200
-        })
+        });
     }, [])
 
   return (

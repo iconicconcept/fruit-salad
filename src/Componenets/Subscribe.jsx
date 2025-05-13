@@ -18,7 +18,7 @@ function Subscribe() {
   useEffect(()=>{
     Aos.init({
         duration: 1200
-    })
+    });
   }, [])
 
   return (

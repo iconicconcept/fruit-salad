@@ -15,7 +15,7 @@ function Contact() {
     useEffect(()=>{
         Aos.init({
             duration: 1200
-        })
+        });
     }, [])
 
   return (
