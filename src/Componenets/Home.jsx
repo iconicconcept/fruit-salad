@@ -1,10 +1,7 @@
 import Logo from "../assets/jez salad LOGO.png"
+import { useState } from "react"
 import "../index.css"
 import HappyLady from "../assets/chef Illustration.png"
-import Products from "./Products"
-import Contact from "./Contact"
-import Review from "./Review"
-import { Link } from "react-scroll"
 import AOS from "aos"
 import "aos/dist/aos.css"
 import { useEffect } from "react"
@@ -18,6 +15,15 @@ import harmburger from "../assets/hamburger.png"
     })
   },[])
 
+  const [isOpen, setIsOpen] = useState(false)
+    const toggleMenu = ()=>{
+        setIsOpen(!isOpen)
+    }
+    const closeMenu = ()=>{
+        setIsOpen(false)
+    }
+
+
   const order = ()=>{
     alert("Servive not Availale!")
   }
@@ -26,14 +32,6 @@ import harmburger from "../assets/hamburger.png"
     alert("Currently Under Maintainance")
   }
 
-
-  // const scrollToView = (elementId) => {
-  //   const element = document.getElementById(Products);
-  //   if (element) {
-  //     element.scrollIntoView({behavior: "smooth"})
-  //   }
-  // }
-
   return (
     <section 
         className="h-[max-content] bg-white text-[#828282] flex flex-col gap-6 home-sec pb-6">
@@ -41,21 +39,31 @@ import harmburger from "../assets/hamburger.png"
             <img src={Logo} alt="Logo" />
             <ul className="hidden md:flex lg:flex gap-3 cursor-pointer font-semibold">
               <li className="hover:pointer hover:underline cursor-pointer" >
-                <Link to="/" smooth={true} duration={500} className="hover:underline">Home</Link>
+                <a href="/" className="hover:underline">Home</a>
               </li>
               <li className="hover:pointer hover:underline cursor-pointer">
-                <Link to="/contact" smooth={true} duration={500} className="hover:underline">Contact</Link>
+                <a href="./Contact.jsx" className="hover:underline">Contact</a>
               </li>
               <li className="hover:pointer hover:underline cursor-pointer">
-                <Link to="/products" smooth={true} duration={500} className="hover:underline">Menu</Link>
+                <a href="./Products.jsx" className="hover:underline">Menu</a>
               </li>
               <li className="hover:pointer hover:underline cursor-pointer">
-              <Link to="/about" smooth={true} duration={500} className="hover:underline">About Us</Link>
+                 <a href="./About.jsx" className="hover:underline">About Us</a>
               </li>
             </ul>
             <button className="sign-up hidden md:flex lg:flex" onClick={later}>sign</button>
-            <img src={harmburger} className="bg-amber-600 cursor-pointer px-1 py-2 flex md:hidden lg:hidden" alt="toggle" />
+            {isOpen ? <img src={harmburger} onClick={toggleMenu} className="bg-amber-600 cursor-pointer px-1 py-2 flex md:hidden lg:hidden" alt="toggle" />
+            : <img src={harmburger} onClick={toggleMenu} className="bg-orange-200 cursor-pointer px-1 py-2 flex md:hidden lg:hidden" alt="toggle" />}
         </div>
+
+        {isOpen && <div className="bg-orange-300 h-[70vh] flex justify-center items-center text-white w-full pt-10 absolute z-5">
+            <ul className="flex flex-col gap-8 font-bold text-[18px] text-center">
+                <li className="cursor-pointer "><a href="/" onClick={closeMenu}>Home</a></li>
+                <li className="cursor-pointer"><a href="./Contact.jsx" onClick={closeMenu}>Contact</a></li>
+                <li className="cursor-pointer"><a href="./Products.jsx" onClick={closeMenu}>Menu</a></li>
+                <li className="cursor-pointer"><a href="./About.jsx" onClick={closeMenu}>About Us</a></li>
+            </ul>
+    </div>}
 
         <div className="flex flex-col md:flex-row lg:flex-row justify-between gap-5 px-5 md:px-30 lg:px-30 appear">
             <div className="flex flex-col gap-8">

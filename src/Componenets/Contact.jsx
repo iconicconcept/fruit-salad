@@ -5,7 +5,6 @@ import linkedin from "../assets/linkedin.png"
 import instagram from "../assets/instagram.png"
 import twitter from "../assets/twitter.png"
 import call from "../assets/call.png"
-import { Link } from "react-router-dom"
 import "../index.css"
 import { useEffect } from 'react'
 
@@ -32,10 +31,10 @@ function Contact() {
         <div className='flex justify-center ' data-aos="fade-right">
             <ul className='flex flex-col gap-2 justify-center text-center md:text-start lg:text-start text-[17px] md:text-[14px] lg:text-[14px]'>
                 <li><a className="cursor-pointer hover:text-[#FB9333]">Feature</a></li>
-                <li><a className='cursor-pointer hover:text-[#FB9333]'>Menu</a></li>
-                <li><a className='cursor-pointer hover:text-[#FB9333]'>Promo</a></li>
-                <li><a className='cursor-pointer hover:text-[#FB9333]'>Contact</a></li>
-                <li><a className='cursor-pointer hover:text-[#FB9333]'>About Us</a></li>
+                <li><a href='./Products.jsx' className='cursor-pointer hover:text-[#FB9333]'>Menu</a></li>
+                <li><a href='./Home.jsx' className='cursor-pointer hover:text-[#FB9333]'>Promo</a></li>
+                <li><a href='./Contact.jsx' className='cursor-pointer hover:text-[#FB9333]'>Contact</a></li>
+                <li><a href='./About.jsx' className='cursor-pointer hover:text-[#FB9333]'>About Us</a></li>
             </ul>
         </div>
         <div className='flex flex-col text-center md:text-start lg:text-start items-center md:items-start lg:items-start gap-4 ' data-aos="fade-right">
@@ -53,9 +52,9 @@ function Contact() {
         </div>
         <div className='flex flex-col text-center md:text-start lg:text-start items-center md:items-end lg:items-end gap-4 pb-8 md:pb-0 lg:pb-0'>
             <div className='flex gap-8'>
-                <a href="#"><img src={twitter} alt="twitter" className='size-5' /></a>
-                <a href="#"><img src={linkedin} alt="linkedin" className='size-5' /></a>
-                <a href="#"><img src={instagram} alt="instagram" className='size-5' /></a>
+                <a href="www.x.com"><img src={twitter} alt="twitter" className='size-5' /></a>
+                <a href="www.linkedin.com"><img src={linkedin} alt="linkedin" className='size-5' /></a>
+                <a href="www.instagram.com"><img src={instagram} alt="instagram" className='size-5' /></a>
             </div>
             <p className='text-[13px]'>Follow our social media.</p>
         </div>
