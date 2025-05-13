@@ -11,7 +11,7 @@ import harmburger from "../assets/hamburger.png"
 
   useEffect(()=>{
     AOS.init({
-      duration:1200
+      duration: 600
     });
   },[])
 

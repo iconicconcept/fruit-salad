@@ -14,7 +14,7 @@ import "aos/dist/aos.css"
 function Contact() {
     useEffect(()=>{
         Aos.init({
-            duration: 1200
+            duration: 600
         });
     }, [])
 
