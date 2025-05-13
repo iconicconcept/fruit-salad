@@ -9,7 +9,7 @@ import { useEffect } from "react"
 function About() {
         useEffect(()=>{
           AOS.init({
-            duration: 600
+            duration: 1200
           });
         },[])
 
@@ -17,11 +17,11 @@ function About() {
     <section className="about-sec h-[max-content] bg-white text-[#828282] px-5 md:px-35 lg:px-35 flex flex-col gap-20 py-20">
         <div className="flex gap-4 justify-between flex-col md:flex-row lg:flex-row">
             <h1 className=" text-[#575757] font-semibold text-[30px] max-w-130 leading-9 text-center md:text-start lg:text-start" data-aos="fade-right" >WHY CHOOSE US <br /> 
-                <span className="text-[#FB9333]" data-aos="fade-up">FOR YOUR HEALTHY FOOD</span></h1>
-            <p className="max-w-120 text-center md:text-start lg:text-start" data-aos="fade-left">We continue to consistently choose and maintain the quality of the fruit served, so that it remains fresh and nutritious when you eat it.</p>
+                <span className="text-[#FB9333]">FOR YOUR HEALTHY FOOD</span></h1>
+            <p className="max-w-120 text-center md:text-start lg:text-start">We continue to consistently choose and maintain the quality of the fruit served, so that it remains fresh and nutritious when you eat it.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-7">
-            <div className="flex flex-col gap-13 smaller-box p-4 rounded-2xl border border-amber-300 md:border-0 lg:border-0" data-aos="fade-right">
+            <div className="flex flex-col gap-13 smaller-box p-4 rounded-2xl border border-amber-300 md:border-0 lg:border-0" >
                 <div className="h-18 w-18 bg-[#FFE8C8] rounded-2xl flex justify-center items-center"><img src={House} className="size-12" alt="Icon" /></div>
                 <div className="flex flex-col gap-4">
                     <h1 className="font-bold text-black text-[20px]">Own fruit orchard</h1>

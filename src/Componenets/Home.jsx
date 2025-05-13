@@ -11,7 +11,7 @@ import harmburger from "../assets/hamburger.png"
 
   useEffect(()=>{
     AOS.init({
-      duration: 600
+      duration: 1200
     });
   },[])
 
@@ -73,11 +73,11 @@ import harmburger from "../assets/hamburger.png"
               healthy and delicious food for you!</p>
               <button className="sign-up cursor-pointer md:w-[max-content]" onClick={order} data-aos="float-right">Order Food</button>
               <div className="flex justify-center md:justify-start lg:justify-start gap-8">
-                <div data-aos="fade-up">
+                <div >
                   <h1 className="font-semibold text-[20px] text-[#575757]">5000+</h1>
                   <p className="text-[15px] ">Customers</p>
                 </div>
-                <div data-aos="fade-up">
+                <div>
                   <h1 className="font-semibold text-[20px] text-[#575757]">8.000+</h1>
                   <p className="text-[15px] ">Delivery</p>
                 </div>
@@ -87,7 +87,7 @@ import harmburger from "../assets/hamburger.png"
                 </div>
               </div>
             </div>
-            <img data-aos="fade-up" src={HappyLady} alt="chef" className="illustration size-[500px] appear" />
+            <img src={HappyLady} alt="chef" className="illustration size-[500px] appear" />
         </div>
         
     </section>

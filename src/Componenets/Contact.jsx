@@ -14,7 +14,7 @@ import "aos/dist/aos.css"
 function Contact() {
     useEffect(()=>{
         Aos.init({
-            duration: 600
+            duration: 1200
         });
     }, [])
 
@@ -28,7 +28,7 @@ function Contact() {
             <p className='text-[14px]' data-aos="fade-left">©Copyright Jez Salad</p>
         </div>
 
-        <div className='flex justify-center ' data-aos="fade-right">
+        <div className='flex justify-center '>
             <ul className='flex flex-col gap-2 justify-center text-center md:text-start lg:text-start text-[17px] md:text-[14px] lg:text-[14px]'>
                 <li><a className="cursor-pointer hover:text-[#FB9333]">Feature</a></li>
                 <li><a href='./Products.jsx' className='cursor-pointer hover:text-[#FB9333]'>Menu</a></li>
@@ -37,7 +37,7 @@ function Contact() {
                 <li><a href='./About.jsx' className='cursor-pointer hover:text-[#FB9333]'>About Us</a></li>
             </ul>
         </div>
-        <div className='flex flex-col text-center md:text-start lg:text-start items-center md:items-start lg:items-start gap-4 ' data-aos="fade-right">
+        <div className='flex flex-col text-center md:text-start lg:text-start items-center md:items-start lg:items-start gap-4 ' >
             <p className="text-[#FB9333] font-semibold">Get in Touch</p>
             <div className='text-[13px]'>
                 <img src={location} alt="location" className='inline size-4 mr-1' /> 8819 Ohio St. South Gate,
